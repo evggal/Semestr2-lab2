@@ -8,8 +8,6 @@ using namespace std;
 
 class class_Atribut {
     double deistvit, mnimoe;
-    friend void input(class_Atribut&);
-    friend void output(class_Atribut&);
     friend class Komplex_chislo;
     friend ostream& operator << (ostream&, const class_Atribut&);
     friend istream& operator >> (istream&, class_Atribut&);
@@ -45,16 +43,6 @@ public:
         cout << chislo;
     }
 };
-
-void input(class_Atribut& chislo)
-{
-    cin >> chislo.deistvit >> chislo.mnimoe;
-}
-void output(class_Atribut& chislo)
-{
-    cout << "(" << chislo.deistvit << ", "
-        << chislo.mnimoe << ")\n";
-}
 
 ostream& operator << (ostream& os, const class_Atribut& chislo)
 {
